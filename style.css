@@ -1975,3 +1975,1983 @@ body {
     }
 
 }
+
+/* =====================================================
+   YATHARTH SHOOTING ACADEMY
+   HERO SECTION
+===================================================== */
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    width: 100%;
+
+    height: calc(100vh - 171px);
+
+    min-height: 600px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #080808;
+
+}
+
+
+/* =====================================================
+   SLIDES
+===================================================== */
+
+.hero-slides {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+}
+
+
+.hero-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: scale(1.08);
+
+    transition:
+        opacity 0.9s ease,
+        visibility 0.9s ease,
+        transform 6s ease;
+
+}
+
+
+.hero-slide.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: scale(1);
+
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+===================================================== */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.90) 0%,
+            rgba(0,0,0,0.65) 40%,
+            rgba(0,0,0,0.25) 75%,
+            rgba(0,0,0,0.55) 100%
+        );
+
+}
+
+
+/* Bottom shadow */
+
+.hero-overlay::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 35%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.8)
+        );
+
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 7%;
+
+    transform: translateY(-50%);
+
+    width: 650px;
+
+    max-width: 80%;
+
+    z-index: 5;
+
+}
+
+
+/* Small heading */
+
+.hero-small {
+
+    color: #ff6a00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.hero-small::before {
+
+    content: "";
+
+    width: 45px;
+
+    height: 2px;
+
+    background: #ff6a00;
+
+}
+
+
+/* =====================================================
+   MAIN HEADING
+===================================================== */
+
+.hero-content h1 {
+
+    color: #ffffff;
+
+    font-size: clamp(
+        50px,
+        6vw,
+        90px
+    );
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin: 0;
+
+}
+
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: #ff6a00;
+
+    font-size: 0.45em;
+
+    letter-spacing: 8px;
+
+    margin: 12px 0;
+
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.hero-content p {
+
+    max-width: 500px;
+
+    margin-top: 25px;
+
+    color: #d0d0d0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 32px;
+
+}
+
+
+.hero-btn {
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+
+}
+
+
+/* Primary */
+
+.hero-btn.primary {
+
+    color: #ffffff;
+
+    background: #ff6a00;
+
+}
+
+
+.hero-btn.primary:hover {
+
+    background: #e85d00;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* Secondary */
+
+.hero-btn.secondary {
+
+    color: #ffffff;
+
+    border: 1px solid
+        rgba(255,255,255,0.5);
+
+    background:
+        rgba(0,0,0,0.2);
+
+}
+
+
+.hero-btn.secondary:hover {
+
+    color: #ffffff;
+
+    border-color: #ff6a00;
+
+    background:
+        rgba(255,106,0,0.15);
+
+}
+
+
+/* =====================================================
+   ARROWS
+===================================================== */
+
+.hero-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+
+    height: 52px;
+
+    border: 1px solid
+        rgba(255,255,255,0.3);
+
+    background:
+        rgba(0,0,0,0.35);
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: 0.3s ease;
+
+    backdrop-filter: blur(5px);
+
+}
+
+
+.hero-arrow:hover {
+
+    background: #ff6a00;
+
+    border-color: #ff6a00;
+
+}
+
+
+.hero-prev {
+
+    left: 25px;
+
+}
+
+
+.hero-next {
+
+    right: 25px;
+
+}
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+.hero-controls {
+
+    position: absolute;
+
+    left: 7%;
+
+    bottom: 55px;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+/* Dots */
+
+.hero-dots {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.hero-dot {
+
+    width: 30px;
+
+    height: 3px;
+
+    padding: 0;
+
+    border: none;
+
+    background: rgba(255,255,255,0.35);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.hero-dot.active {
+
+    width: 55px;
+
+    background: #ff6a00;
+
+}
+
+
+/* =====================================================
+   SLIDE NUMBER
+===================================================== */
+
+.slide-number {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.slide-number span:first-child {
+
+    color: #ff6a00;
+
+    font-weight: 800;
+
+}
+
+
+.slide-number .line {
+
+    width: 30px;
+
+    height: 1px;
+
+    background: #555555;
+
+}
+
+
+/* =====================================================
+   SCROLL DOWN
+===================================================== */
+
+.hero-scroll {
+
+    position: absolute;
+
+    right: 45px;
+
+    bottom: 45px;
+
+    z-index: 10;
+
+    color: #aaaaaa;
+
+    text-decoration: none;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    writing-mode: vertical-rl;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.hero-scroll i {
+
+    color: #ff6a00;
+
+    animation:
+        scrollArrow 1.5s
+        ease-in-out infinite;
+
+}
+
+
+.hero-scroll:hover {
+
+    color: #ffffff;
+
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes scrollArrow {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(7px);
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+
+        height:
+            calc(100vh - 157px);
+
+    }
+
+
+    .hero-content {
+
+        left: 8%;
+
+        width: 600px;
+
+    }
+
+
+    .hero-arrow {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    .hero-prev {
+
+        left: 15px;
+
+    }
+
+
+    .hero-next {
+
+        right: 15px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .hero {
+
+        height:
+            calc(100vh - 156px);
+
+        min-height: 580px;
+
+    }
+
+
+    .hero-slide {
+
+        background-position:
+            center;
+
+    }
+
+
+    .hero-overlay {
+
+        background:
+
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,0.88),
+                rgba(0,0,0,0.55)
+            );
+
+    }
+
+
+    .hero-content {
+
+        left: 6%;
+
+        width: 88%;
+
+        max-width: none;
+
+    }
+
+
+    .hero-small {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .hero-small::before {
+
+        width: 25px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 47px;
+
+    }
+
+
+    .hero-content h1 span {
+
+        font-size: 18px;
+
+        letter-spacing: 5px;
+
+        margin: 9px 0;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 12px;
+
+        line-height: 1.6;
+
+        margin-top: 18px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-wrap: wrap;
+
+        margin-top: 25px;
+
+    }
+
+
+    .hero-btn {
+
+        min-height: 43px;
+
+        padding: 0 16px;
+
+        font-size: 8px;
+
+    }
+
+
+    .hero-arrow {
+
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 12px;
+
+    }
+
+
+    .hero-prev {
+
+        left: 10px;
+
+    }
+
+
+    .hero-next {
+
+        right: 10px;
+
+    }
+
+
+    .hero-controls {
+
+        left: 6%;
+
+        bottom: 25px;
+
+        gap: 20px;
+
+    }
+
+
+    .hero-scroll {
+
+        display: none;
+
+    }
+
+}
+
+/* =====================================================
+   YATHARTH SHOOTING ACADEMY
+   STATS BAR
+===================================================== */
+
+.stats-section {
+
+    width: 100%;
+
+    background: #0b0b0b;
+
+    border-top: 1px solid
+        rgba(255, 106, 0, 0.18);
+
+    border-bottom: 1px solid
+        rgba(255, 106, 0, 0.18);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Orange top line */
+
+.stats-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #ff6a00;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.stats-container {
+
+    width: 90%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+}
+
+
+/* =====================================================
+   STAT BOX
+===================================================== */
+
+.stat-box {
+
+    min-height: 155px;
+
+    padding: 30px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    border-right: 1px solid
+        rgba(255,255,255,0.08);
+
+    transition: 0.4s ease;
+
+}
+
+
+/* Remove last border */
+
+.stat-box:last-child {
+
+    border-right: none;
+
+}
+
+
+/* Hover */
+
+.stat-box:hover {
+
+    background: #111111;
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.stat-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ff6a00;
+
+    border: 1px solid
+        rgba(255,106,0,0.35);
+
+    font-size: 16px;
+
+    transition: 0.4s ease;
+
+}
+
+
+.stat-box:hover .stat-icon {
+
+    background: #ff6a00;
+
+    color: #ffffff;
+
+    transform:
+        rotate(45deg);
+
+}
+
+
+.stat-box:hover .stat-icon i {
+
+    transform:
+        rotate(-45deg);
+
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.stat-number {
+
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: center;
+
+    line-height: 1;
+
+}
+
+
+/* Counter */
+
+.counter {
+
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* Plus */
+
+.plus {
+
+    color: #ff6a00;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    margin-left: 3px;
+
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.stat-title {
+
+    margin-top: 9px;
+
+    color: #888888;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   ANIMATION LINE
+===================================================== */
+
+.stat-box::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #ff6a00;
+
+    transform:
+        translateX(-50%);
+
+    transition: 0.4s ease;
+
+}
+
+
+.stat-box:hover::after {
+
+    width: 50%;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .stats-container {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .stat-box:nth-child(2) {
+
+        border-right: none;
+
+    }
+
+
+    .stat-box:nth-child(1),
+    .stat-box:nth-child(2) {
+
+        border-bottom: 1px solid
+            rgba(255,255,255,0.08);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .stats-container {
+
+        width: 100%;
+
+    }
+
+
+    .stat-box {
+
+        min-height: 125px;
+
+        padding: 20px 10px;
+
+    }
+
+
+    .stat-icon {
+
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 13px;
+
+    }
+
+
+    .counter {
+
+        font-size: 29px;
+
+    }
+
+
+    .plus {
+
+        font-size: 19px;
+
+    }
+
+
+    .stat-title {
+
+        font-size: 7px;
+
+        letter-spacing: 1.3px;
+
+    }
+
+}
+
+/* =====================================================
+   YATHARTH SHOOTING ACADEMY
+   ABOUT SECTION
+===================================================== */
+
+.about-section {
+
+    width: 100%;
+
+    padding: 110px 0;
+
+    background: #0b0b0b;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+/* Decorative background */
+
+.about-section::before {
+
+    content: "PRECISION";
+
+    position: absolute;
+
+    right: -80px;
+
+    top: 80px;
+
+    color: rgba(255,255,255,0.025);
+
+    font-size: 120px;
+
+    font-weight: 900;
+
+    letter-spacing: 8px;
+
+    transform: rotate(90deg);
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.about-container {
+
+    width: 88%;
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr 1.1fr;
+
+    gap: 90px;
+
+    align-items: center;
+
+}
+
+
+/* =====================================================
+   IMAGE AREA
+===================================================== */
+
+.about-image-area {
+
+    position: relative;
+
+    padding: 15px;
+
+}
+
+
+/* Orange border */
+
+.about-image-area::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 65%;
+
+    height: 65%;
+
+    border-top: 2px solid #ff6a00;
+
+    border-left: 2px solid #ff6a00;
+
+}
+
+
+/* Bottom border */
+
+.about-image-area::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 65%;
+
+    height: 65%;
+
+    border-right: 2px solid #ff6a00;
+
+    border-bottom: 2px solid #ff6a00;
+
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.about-image {
+
+    width: 100%;
+
+    height: 600px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.about-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    filter: grayscale(15%);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+
+}
+
+
+.about-image-area:hover
+.about-image img {
+
+    transform: scale(1.05);
+
+    filter: grayscale(0%);
+
+}
+
+
+/* Image overlay */
+
+.image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(0,0,0,0.8)
+        );
+
+}
+
+
+/* =====================================================
+   EXPERIENCE BADGE
+===================================================== */
+
+.experience-badge {
+
+    position: absolute;
+
+    left: -15px;
+
+    bottom: 45px;
+
+    width: 145px;
+
+    height: 145px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ff6a00;
+
+    color: #ffffff;
+
+    z-index: 5;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.4);
+
+}
+
+
+.experience-badge strong {
+
+    font-size: 42px;
+
+    font-weight: 900;
+
+    line-height: 1;
+
+}
+
+
+.experience-badge span {
+
+    margin-top: 8px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-align: center;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   TARGET DECORATION
+===================================================== */
+
+.target-decoration {
+
+    position: absolute;
+
+    right: -25px;
+
+    top: 50%;
+
+    width: 90px;
+
+    height: 90px;
+
+    border: 1px solid
+        rgba(255,106,0,0.5);
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 4;
+
+}
+
+
+.target-decoration span {
+
+    position: absolute;
+
+    border: 1px solid
+        rgba(255,106,0,0.35);
+
+    border-radius: 50%;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+
+.target-decoration span:nth-child(1) {
+
+    width: 65px;
+    height: 65px;
+
+}
+
+
+.target-decoration span:nth-child(2) {
+
+    width: 40px;
+    height: 40px;
+
+}
+
+
+.target-decoration span:nth-child(3) {
+
+    width: 15px;
+    height: 15px;
+
+    background: #ff6a00;
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.about-content {
+
+    position: relative;
+
+}
+
+
+/* Section tag */
+
+.section-tag {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #ff6a00;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.section-tag span {
+
+    width: 35px;
+
+    height: 2px;
+
+    background: #ff6a00;
+
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.about-content h2 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        40px,
+        4.5vw,
+        68px
+    );
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.about-content h2 span {
+
+    display: block;
+
+    color: #ff6a00;
+
+}
+
+
+/* =====================================================
+   TEXT
+===================================================== */
+
+.about-intro {
+
+    margin-top: 28px;
+
+    color: #ffffff !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.8 !important;
+
+    max-width: 700px;
+
+}
+
+
+.about-content > p:not(.about-intro) {
+
+    margin-top: 15px;
+
+    color: #999999;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.about-features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 35px;
+
+}
+
+
+.about-feature {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 15px 0;
+
+}
+
+
+.about-feature > i {
+
+    min-width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ff6a00;
+
+    border: 1px solid
+        rgba(255,106,0,0.35);
+
+    font-size: 14px;
+
+}
+
+
+.about-feature h4 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.about-feature p {
+
+    margin-top: 6px;
+
+    color: #777777;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =====================================================
+   COACH PROFILE
+===================================================== */
+
+.coach-profile {
+
+    margin-top: 30px;
+
+    padding: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: #121212;
+
+    border: 1px solid
+        rgba(255,255,255,0.07);
+
+    transition: 0.4s ease;
+
+}
+
+
+.coach-profile:hover {
+
+    border-color:
+        rgba(255,106,0,0.5);
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* Coach image */
+
+.coach-photo {
+
+    width: 70px;
+
+    height: 70px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+}
+
+
+.coach-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* Coach information */
+
+.coach-info {
+
+    padding-left: 18px;
+
+}
+
+
+.coach-info > span {
+
+    color: #ff6a00;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.coach-info h3 {
+
+    margin-top: 5px;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+}
+
+
+.coach-info p {
+
+    margin-top: 4px;
+
+    color: #777777;
+
+    font-size: 9px;
+
+}
+
+
+/* Arrow */
+
+.coach-arrow {
+
+    margin-left: auto;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ff6a00;
+
+    border-left: 1px solid
+        rgba(255,255,255,0.08);
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.about-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 30px;
+
+    padding: 14px 22px;
+
+    background: #ff6a00;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.about-button:hover {
+
+    background: #e85d00;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.about-button i {
+
+    transition: 0.3s ease;
+
+}
+
+
+.about-button:hover i {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .about-container {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .about-image {
+
+        height: 550px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .about-section {
+
+        padding: 75px 0;
+
+    }
+
+
+    .about-container {
+
+        width: 90%;
+
+        gap: 45px;
+
+    }
+
+
+    .about-image {
+
+        height: 450px;
+
+    }
+
+
+    .experience-badge {
+
+        width: 110px;
+
+        height: 110px;
+
+        left: -5px;
+
+        bottom: 25px;
+
+    }
+
+
+    .experience-badge strong {
+
+        font-size: 30px;
+
+    }
+
+
+    .target-decoration {
+
+        width: 65px;
+
+        height: 65px;
+
+        right: -12px;
+
+    }
+
+
+    .about-features {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 5px;
+
+    }
+
+
+    .about-content h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    .about-intro {
+
+        font-size: 13px !important;
+
+    }
+
+
+    .coach-profile {
+
+        padding: 10px;
+
+    }
+
+
+    .coach-photo {
+
+        width: 58px;
+
+        height: 58px;
+
+    }
+
+}
